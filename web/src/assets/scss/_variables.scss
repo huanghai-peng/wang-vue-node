@@ -1,0 +1,29 @@
+// colors
+$colors:( "primary": #db9e3f, "dange":#791a16, "blue":#213894, "info-1":#4394e4, "info":#4b67af, "white": #fff, 'light-1': #d4d9de, "light": #f9f9f9, "grey-1": #666, "grey": #999, "dark-2": #343440, "dark-1": #131528, "dark": #222, "black": #000);
+@each $colorKey,
+$color in $colors {
+    .text-#{$colorKey} {
+        color: $color;
+    }
+    .bg-#{$colorKey} {
+        background-color: $color;
+    }
+}
+
+$border-color: map-get($colors, "light-1"); // font
+$base-font-size: 1rem;
+$sizes:( xs: .769231, //10px
+sm: .923077, //12px
+md: 1, //13px
+lg: 1.076923, //14px
+xl: 1.230769 //16px
+);
+// flex
+$flex-jc:( start:flex-start, center:center, end:flex-end, between:space-between, around:space-around);
+$flex-ai:( start:flex-start, center:center, end:flex-end, stretch:stretch);
+$directions:(column:column);
+// spacing
+$spacing-base-size: 1rem;
+$spacing-types:(m:margin, p:padding);
+$spacing-directions:(l:left, r:right, t:top, b:bottom);
+$spacing-sizes:(0:0, 1:0.5, 2:1, 3:1.5, 4:2, 5:3);
